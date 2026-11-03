@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn get_transitions() -> HashMap<(i32, i32), HashMap<i32, f64>> {
+pub fn get_transitions() -> HashMap<(u32, u32), HashMap<u32, f64>> {
     HashMap::from([
         ((0, 0), HashMap::from([(1, 1.0)])),
         ((0, 1), HashMap::from([(2, 1.0)])),

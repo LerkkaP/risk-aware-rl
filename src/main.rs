@@ -25,4 +25,9 @@ fn main() {
         transitions: transitions,
         actlist: actlist
     };
+
+   let a = mdp.step(0, 2);
+
+   println!("{}", a.0);
+
 }

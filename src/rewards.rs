@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn get_rewards_original() -> HashMap<(i32, i32, i32), i32> {
+pub fn get_rewards_original() -> HashMap<(u32, u32, u32), i32> {
     HashMap::from([
         ((0, 0, 1), 0),
         ((0, 1, 2), 0),
