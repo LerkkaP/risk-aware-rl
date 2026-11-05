@@ -40,7 +40,7 @@ pub fn optimal_value_function(mdp: &mdp::MDP) -> Vec<f64> {
     
 }
 
-pub fn optimal_policy(mdp: mdp::MDP, optimal_value_function: Vec<f64>) -> HashMap<u32, u32> {
+pub fn optimal_policy(mdp: &mdp::MDP, optimal_value_function: Vec<f64>) -> HashMap<u32, u32> {
     let mut result: HashMap<u32, u32> = HashMap::new();
     let states = [0, 1, 2, 3];
     let discount_factor = 0.95;

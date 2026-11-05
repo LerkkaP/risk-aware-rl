@@ -28,10 +28,5 @@ fn main() {
     };
 
     let optimal_value_function = value_iteration::optimal_value_function(&mdp);
-
-    for (i, value) in optimal_value_function.iter().enumerate() {
-        println!("State: {}, Value: {}", i, value);
-    }
-
-    let optimal_policy = value_iteration::optimal_policy(mdp, optimal_value_function);
+    let optimal_policy = value_iteration::optimal_policy(&mdp, optimal_value_function);
 }
