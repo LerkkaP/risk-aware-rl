@@ -3,6 +3,7 @@ use std::collections::HashMap;
 mod rewards;
 mod transitions;
 mod mdp;
+mod value_iteration;
 
 fn main() {
     let transitions = transitions::get_transitions();
@@ -26,8 +27,9 @@ fn main() {
         actlist: actlist
     };
 
-   let a = mdp.step(0, 2);
+    let optimal_value_function = value_iteration::find_optimal_value_function(mdp);
 
-   println!("{}", a.0);
-
+    for (i, value) in optimal_value_function.iter().enumerate() {
+        println!("State: {}, Value: {}", i, value);
+    }
 }
