@@ -22,7 +22,7 @@ fn main() {
 
     let mdp = mdp::MDP {
         terminal_states: terminal_states,
-        rewards: rewards_original,
+        rewards: rewards_original.clone(),
         transitions: transitions,
         actlist: actlist
     };
@@ -34,6 +34,4 @@ fn main() {
     }
 
     let optimal_policy = value_iteration::optimal_policy(mdp, optimal_value_function);
-
-    println!("{:?}", optimal_policy);
 }
